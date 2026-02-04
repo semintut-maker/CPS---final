@@ -1,0 +1,32 @@
+.expand-button {
+  color: $textDark;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  background-color: $tr;
+  margin: 10px 0 15px 0;
+  padding: 0;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 11px;
+    background: url(../img/icon.svg) no-repeat $tr;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+    margin: 10px 10px 5px;
+  }
+
+  &.coup::before {
+    transform: rotateX(180deg);
+  }
+
+  &:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

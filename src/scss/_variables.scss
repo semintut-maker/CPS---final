@@ -1,0 +1,26 @@
+// Цвета
+$bgColor: #f8f8f8;
+$bgColorAlt: #ffffff;
+$textDark: #1b1c21;
+$textGrey: #7e7e82;
+$textAccent: #ff3e79;
+$colorHover: #41f6d7;
+$colorBorder: #b8ffec;
+$divingLineColor: #eaeaea;
+$tr: transparent;
+$pgColor: #b5b6bc;
+$colorShadow: rgba(198, 2, 110, 0.3);
+$bgColorBurg: rgba(255, 255, 255, 0.5);
+
+// Рамки
+$border: 2px solid $colorBorder;
+$borderTr: 2px solid $tr;
+$borderLine: 1px solid $colorBorder;
+$borderDivingLine: 1px solid $divingLineColor;
+$radius: 6px;
+$radiusLarge: 50%;
+$brWidth: 40px;
+$brHeight: 40px;
+
+// Градиент
+$gradientMain: linear-gradient(to right, #{$bgColor}, #{$bgColorAlt});

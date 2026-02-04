@@ -1,0 +1,108 @@
+.brands {
+  &__slider-container {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  &__header {
+    height: 80px;
+    background: $gradientMain;
+    border-top: $borderLine;
+  }
+
+  &__title {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $textGrey;
+  }
+
+  &__slider {
+    margin-top: 15px;
+    overflow: hidden;
+  }
+
+  &__bullet {
+    background-color: $pgColor;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: $radiusLarge;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &--active {
+      opacity: 1;
+      background-color: $pgColor;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__expand-button {
+    display: none;
+    color: $textDark;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    border: none;
+    background-color: $tr;
+    padding: 0;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 11px;
+      background: url(../img/icon.svg) no-repeat $tr;
+      margin-right: 10px;
+      vertical-align: text-bottom;
+      transform-style: preserve-3d;
+      transition: transform 0.4s;
+      margin: 10px 10px 5px;
+    }
+
+    &.coup::before {
+      transform: rotateX(180deg);
+    }
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.brand-slide.swiper-slide {
+  margin: 0 0 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 72px;
+  background-color: $bgColorAlt;
+  border: $borderDivingLine;
+  border-radius: $radius;
+  flex-shrink: 0;
+}
+
+.brand-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15px;
+
+  &__btn {
+    background-image: url(../img/go.svg);
+    width: $brWidth;
+    height: $brHeight;
+  }
+}

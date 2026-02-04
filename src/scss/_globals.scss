@@ -1,0 +1,42 @@
+body {
+  min-width: 320px;
+  padding: 0;
+  font-family: TTLakes, sans-serif;
+  font-size: 14px;
+  background-color: $bgColor;
+  color: $textDark;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+button {
+  transform: rotate(0deg) scale(1);
+  transition: transform 0.7s ease-in-out;
+  background: none;
+  cursor: pointer;
+  background-color: $tr;
+  border: none;
+  &:hover {
+    filter: drop-shadow(0px 0px 6px $colorShadow);
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+:focus {
+  outline: none;
+  filter: drop-shadow(1px 1px 6px $textGrey);
+}

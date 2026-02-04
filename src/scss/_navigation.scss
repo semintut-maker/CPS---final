@@ -1,0 +1,41 @@
+.navigation {
+  &__list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+    margin: 0 0 20px 15px;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    scroll-snap-align: start;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    border: $borderTr;
+    border-radius: $radius;
+    height: $brHeight;
+    padding: 0 10px;
+    flex-shrink: 0;
+
+    &:hover {
+      border-color: $colorBorder;
+      background: $bgColorAlt;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 16px;
+    color: $textGrey;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,96 @@
+.submenu-feedback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1001;
+  background-color: $bgColorAlt;
+  overflow-y: auto;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close-btn {
+    width: $brWidth;
+    height: $brHeight;
+    margin: 20px 15px;
+    background: url('../img/burger\ 2.svg') no-repeat center;
+  }
+
+  &__title {
+    padding-top: 20px;
+    margin: 0 auto 10px 0;
+    font-size: 24px;
+
+    &::before {
+      content: '';
+      border: $colorHover solid 2px;
+      border-radius: 0 20px 20px 0;
+      height: 40px;
+      margin-right: 15px;
+    }
+  }
+
+  &__form {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    background-color: $bgColorAlt;
+  }
+
+  &__field {
+    margin: 15px;
+    padding: 15px;
+    color: $textGrey;
+    border: $borderDivingLine;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 288px;
+    height: 48px;
+    &:focus {
+      border-color: $colorHover;
+      outline: none;
+    }
+  }
+  ::placeholder {
+    color: $pgColor;
+  }
+
+  &__policy {
+    color: $textGrey;
+    margin-left: 15px;
+  }
+  &__text-accent {
+    color: $textAccent;
+  }
+
+  textarea {
+    resize: none;
+    height: 118px;
+  }
+
+  &__submit-btn {
+    margin: 20px 15px 40px auto;
+    background-image: url(../img/Group\ 11.svg);
+    background-color: $tr;
+    width: 136px;
+    height: 32px;
+    border: none;
+    border-radius: 0%;
+    transform: scale(1);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: none;
+      filter: drop-shadow(0px 0px 6px $colorShadow);
+    }
+  }
+}

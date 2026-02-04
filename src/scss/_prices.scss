@@ -1,0 +1,98 @@
+.prices {
+  &__slider-container {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  &__header {
+    height: 56px;
+    background: $gradientMain;
+    border-top: $borderLine;
+  }
+
+  &__title {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $textGrey;
+  }
+
+  &__table-title {
+    display: none;
+  }
+
+  &__slider {
+    margin-top: 15px;
+    overflow: hidden;
+  }
+
+  &__bullet {
+    background-color: $pgColor;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: $radiusLarge;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &--active {
+      opacity: 1;
+      background-color: $pgColor;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.price-slide.swiper-slide {
+  margin: 0 0 15px 15px;
+  display: flex;
+  width: 260px;
+  height: 200px;
+  background-color: $bgColorAlt;
+  border: $borderDivingLine;
+  border-radius: $radius;
+  flex-shrink: 0;
+}
+
+.price-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 10px;
+
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+
+  &__label {
+    color: $textGrey;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background-image: url(../img/Group\ 10.svg);
+    background-color: $tr;
+    width: 119px;
+    height: 32px;
+    border: none;
+    border-radius: 0%;
+    transform: scale(1);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+      box-shadow: none;
+      filter: drop-shadow(0px 0px 6px $colorShadow);
+    }
+  }
+}

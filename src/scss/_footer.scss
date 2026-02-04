@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: $textGrey;
+  padding-bottom: 15px;
+  align-items: center;
+  &__line {
+    text-align: center;
+  }
+}

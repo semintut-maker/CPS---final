@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  height: 87px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: $borderLine;
+  background-color: $bgColorAlt;
+
+  &__left {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: 15px;
+  }
+
+  &__center {
+    display: none;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 15px;
+    padding: 0;
+  }
+
+  &__logo {
+    order: 3;
+  }
+
+  &__button {
+    background-color: transparent;
+    width: $brWidth;
+    height: $brHeight;
+
+    &--burger {
+      background-image: url(../img/burger.svg);
+      order: 1;
+    }
+    &--call {
+      background-image: url(../img/call.svg);
+    }
+    &--chat {
+      background-image: url(../img/chat.svg);
+    }
+    &--profile {
+      background-image: url(../img/profile.svg);
+    }
+    &--repair {
+      background-image: url(../img/repair.svg);
+    }
+    &--check {
+      background-image: url(../img/check.svg);
+    }
+  }
+
+  &__left::after {
+    content: '';
+    border: $borderDivingLine;
+    height: 32px;
+    margin-left: 5px;
+    order: 4;
+  }
+}

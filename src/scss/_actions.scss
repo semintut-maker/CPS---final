@@ -1,0 +1,64 @@
+.actions {
+  display: none;
+  margin-right: 25px;
+  gap: 35px;
+
+  &__button--request {
+    padding: 0;
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: 15px;
+      vertical-align: middle;
+      width: $brWidth;
+      height: $brHeight;
+      transform: rotate(0deg) scale(1);
+      transition: transform 0.7s ease-in-out;
+      border-radius: $radiusLarge;
+      cursor: pointer;
+      background-color: $tr;
+      border: none;
+      background: url(../img/repair.svg) no-repeat $tr;
+    }
+
+    &:hover::after {
+      box-shadow: 0px 0px 6px $colorShadow;
+      transform: rotate(360deg) scale(1.2);
+    }
+  }
+
+  &__button--status {
+    padding: 0;
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: 15px;
+      vertical-align: middle;
+      width: $brWidth;
+      height: $brHeight;
+      transform: rotate(0deg) scale(1);
+      transition: transform 0.7s ease-in-out;
+      background: none;
+      border-radius: $radiusLarge;
+      cursor: pointer;
+      background-color: $tr;
+      border: none;
+      background: url(../img/check.svg) no-repeat $tr;
+    }
+
+    &:hover::after {
+      box-shadow: 0px 0px 6px $colorShadow;
+      transform: rotate(360deg) scale(1.2);
+    }
+  }
+}
